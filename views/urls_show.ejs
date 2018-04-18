@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TinyApp</title>
+</head>
+
+  <% include ./partials/_header %>
+
+  <%
+    var fullShortUrl = hostUrl + "/" + urlObj["shortURL"];
+  %>
+
+  <h1 align="center">URL Details:</h1>
+
+
+<!--    CODE IMPLEMENTED BEFORE UPDATE LONG URL OPERATION (WORKING)
+
+
+  <table border="1" cellspacing="0" align="center" cellpadding="5">
+    <tr>
+      <td>
+        <strong>ShortURL: <%= fullShortUrl %> </strong>
+      </td>
+
+      <td>
+        <strong>Full URL: </strong><%= urlObj["longURL"] %>
+      </td>
+
+  </table>
+-->
+
+  <%
+    var updateUrl = '/urls/' + urlObj["shortURL"];
+  %>
+
+  <strong>ShortURL: <%= fullShortUrl %> </strong>
+  <form method="POST" action="<%= updateUrl %>">
+    <input type="text" name="longNewUrl" size="50" value="<%= urlObj['longURL'] %>" autofocus>
+    <button>Update</button>
+  </form>
+
+</body>
+</html>

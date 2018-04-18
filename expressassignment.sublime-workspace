@@ -1,0 +1,515 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mid",
+				"midIndex"
+			],
+			[
+				"to",
+				"totFollowers"
+			],
+			[
+				"print",
+				"printWhoHasMostFollowers"
+			],
+			[
+				"foll",
+				"follows"
+			],
+			[
+				"ind",
+				"indexOf"
+			],
+			[
+				"fl",
+				"flagIt"
+			],
+			[
+				"flag",
+				"flag"
+			],
+			[
+				"getFollo",
+				"getFollowerList"
+			],
+			[
+				"follow",
+				"followerkey"
+			],
+			[
+				"provin",
+				"provincialSales"
+			],
+			[
+				"prov",
+				"provincialSales"
+			],
+			[
+				"totalSales",
+				"totalSalesTax"
+			],
+			[
+				"sale",
+				"salesObj"
+			],
+			[
+				"tot",
+				"totalSalesTax"
+			],
+			[
+				"sal",
+				"salesObj"
+			],
+			[
+				"tax",
+				"salesTaxRates"
+			],
+			[
+				"company",
+				"companySalesData"
+			],
+			[
+				"comp",
+				"companyGroup"
+			],
+			[
+				"cla",
+				"companySalesData"
+			],
+			[
+				"com",
+				"companyGroup"
+			],
+			[
+				"albu",
+				"albumSearch"
+			],
+			[
+				"play",
+				"playlistId"
+			],
+			[
+				"tOb",
+				"tObjTemp"
+			],
+			[
+				"pla",
+				"playlistId"
+			],
+			[
+				"addtr",
+				"addTrackToPlaylist"
+			],
+			[
+				"printpla",
+				"printPlaylist"
+			],
+			[
+				"addTrack",
+				"addTrackToPlaylist"
+			],
+			[
+				"le",
+				"letterObj"
+			],
+			[
+				"update",
+				"updateWithAssign"
+			],
+			[
+				"mul",
+				"mulr2"
+			],
+			[
+				"some",
+				"something"
+			],
+			[
+				"colpo",
+				"colPosDifference"
+			],
+			[
+				"row",
+				"rowPosDifference"
+			],
+			[
+				"rowpo",
+				"rowPosDifference"
+			],
+			[
+				"inde",
+				"indexVal"
+			],
+			[
+				"last",
+				"lastIndexVal"
+			],
+			[
+				"sqr",
+				"sqrtStrLen"
+			],
+			[
+				"cas",
+				"casingStyle"
+			],
+			[
+				"tit",
+				"titleCase"
+			],
+			[
+				"sna",
+				"snakeCase"
+			],
+			[
+				"pas",
+				"pascalCase"
+			],
+			[
+				"camel",
+				"camelCase"
+			],
+			[
+				"cn",
+				"consonant"
+			],
+			[
+				"pa",
+				"pascalCase"
+			],
+			[
+				"max",
+				"maxValue"
+			],
+			[
+				"line",
+				"lineSeparator"
+			],
+			[
+				"get",
+				"getSpaceString"
+			],
+			[
+				"onedo",
+				"oneDol"
+			],
+			[
+				"con",
+				"conditionalSum"
+			],
+			[
+				"sort",
+				"sortArray"
+			],
+			[
+				"sor",
+				"sortArray"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "packag",
+		"selected_items":
+		[
+			[
+				"packag",
+				"Package Control: Install Package"
+			],
+			[
+				"SUB",
+				"Sublime Tutor: Start"
+			],
+			[
+				"su",
+				"Sublime Tutor: Start"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"package control ",
+				"Package Control: Remove Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 479.0
+	},
+	"console":
+	{
+		"height": 130.0,
+		"history":
+		[
+			"clear",
+			"node run1.js",
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/hemantkumar/lighthouse/projects/TinyApp",
+		"/home/hemantkumar/lighthouse/projects/TinyApp/views",
+		"/home/hemantkumar/lighthouse/projects/TinyApp/views/partials"
+	],
+	"file_history":
+	[
+		"/home/hemantkumar/lighthouse/projects/TinyApp/views/urls_show.ejs",
+		"/home/hemantkumar/lighthouse/projects/TinyApp/views/urls_index.ejs",
+		"/home/hemantkumar/lighthouse/projects/TinyApp/views/partials/_header.ejs",
+		"/home/hemantkumar/lighthouse/projects/TinyApp/views/urls_new.ejs",
+		"/home/hemantkumar/lighthouse/projects/TinyApp/express_server.js",
+		"/home/hemantkumar/lighthouse/w2d2/assignments/firstwebserver/app.js",
+		"/home/hemantkumar/lighthouse/w2d2/assignments/example1/server.js",
+		"/home/hemantkumar/lighthouse/week1end/week1endassignments/node-blog/views/partials/navbar.ejs",
+		"/home/hemantkumar/lighthouse/week1end/week1endassignments/node-blog/views/partials/footer.ejs",
+		"/home/hemantkumar/lighthouse/week1end/week1endassignments/node-blog/views/home.ejs",
+		"/home/hemantkumar/lighthouse/week1end/week1endassignments/node-blog/views/post.ejs",
+		"/home/hemantkumar/lighthouse/week1end/week1endassignments/node-blog/app.js",
+		"/home/hemantkumar/lighthouse/week1end/demoexamples/strx25-0.9.2.1.tar.bz2",
+		"/home/hemantkumar/lighthouse/w1d5/w1d5assignments/createexportmoduleassgn/actualApp.js",
+		"/home/hemantkumar/lighthouse/w1d5/w1d5assignments/createexportmoduleassgn/numdataModule.js",
+		"/home/hemantkumar/lighthouse/w1d5/examweb-01/assessment-exam-student/answers/03.js",
+		"/home/hemantkumar/lighthouse/w1d5/examweb-01/assessment-exam-student/answers/00.js",
+		"/home/hemantkumar/lighthouse/w1d5/examweb-01/assessment-exam-student/answers/04.js",
+		"/home/hemantkumar/lighthouse/w1d5/examweb-01/assessment-exam-student/answers/02.js",
+		"/home/hemantkumar/lighthouse/w1d5/examweb-01/assessment-exam-student/answers/01.js",
+		"/home/hemantkumar/lighthouse/w1d5/examweb-01/assessment-exam-student/.student-id",
+		"/home/hemantkumar/lighthouse/w1d5/w1d5assignments/node_modules/chalk/templates.js",
+		"/home/hemantkumar/lighthouse/w1d5/w1d5assignments/my-module.js",
+		"/home/hemantkumar/lighthouse/w1d5/w1d5assignments/index.js",
+		"/home/hemantkumar/lighthouse/w1d5/w1d5assignments/math-is-cool.js",
+		"/home/hemantkumar/lighthouse/w1d5/w1d5assignments/math-is-cooler-with-pi.js",
+		"/home/hemantkumar/lighthouse/w1d5/w1d5assignments/node_modules/chalk/index.js",
+		"/home/hemantkumar/lighthouse/w1d5/w1d5assignments/node_modules/chalk/package.json",
+		"/home/hemantkumar/lighthouse/w1d5/w1d5assignments/package.json",
+		"/home/hemantkumar/lighthouse/w1d5/lecturedemoex/run1.js",
+		"/home/hemantkumar/lighthouse/w1d5/lecturedemoex/basicMath1.js",
+		"/home/hemantkumar/lighthouse/w1d5/lecturedemoex/notes.md",
+		"/home/hemantkumar/lighthouse/w1d5/lecturedemoex/run.js",
+		"/home/hemantkumar/lighthouse/w1d5/lecturedemoex/basicMath.js",
+		"/home/hemantkumar/lighthouse/w1d3/w1d3assignments/socialnetwork/socialnetwork.js",
+		"/home/hemantkumar/lighthouse/w1d4/w1d4Assignments/closurestretch.js",
+		"/home/hemantkumar/lighthouse/w1d4/w1d4Assignments/temp/temp1.js",
+		"/home/hemantkumar/lighthouse/w1d4/w1d4Assignments/closuresdemo.js",
+		"/home/hemantkumar/lighthouse/w1d4/w1d4Assignments/callbackmap.js",
+		"/home/hemantkumar/lighthouse/w1d4/w1d4Assignments/customsorting.js",
+		"/home/hemantkumar/lighthouse/w1d4/w1d4Assignments/arraymapping.js",
+		"/home/hemantkumar/lighthouse/w1d4/w1d4Assignments/callbackfuncintro.js",
+		"/home/hemantkumar/lighthouse/w1d4/w1d4/callbackfuncintro.js",
+		"/home/hemantkumar/lighthouse/w1d4/w1d4assignments/callbackfuncintro.js",
+		"/home/hemantkumar/lighthouse/w1d4/lecturedemoex/tweep5.js",
+		"/home/hemantkumar/lighthouse/w1d4/lecturedemoex/tweep4.js",
+		"/home/hemantkumar/lighthouse/w1d4/lecturedemoex/tweep3.js",
+		"/home/hemantkumar/lighthouse/w1d4/lecturedemoex/tweep2.js",
+		"/home/hemantkumar/lighthouse/w1d4/lecturedemoex/tweeter1.js",
+		"/home/hemantkumar/lighthouse/w1d3/w1d3assignments/salestaxobjectassgn/salestax.js",
+		"/home/hemantkumar/lighthouse/w1d3/w1d3assignments/musicdirectoryaddgn/librarywithmethods.js",
+		"/home/hemantkumar/lighthouse/w1d3/w1d3assignments/charactercounting.js",
+		"/home/hemantkumar/lighthouse/w1d3/w1d3assignments/characterpositioning.js",
+		"/home/hemantkumar/lighthouse/w1d3/w1d3assignments/musicdirectoryaddgn/library.js",
+		"/home/hemantkumar/lighthouse/w1d3/lecturedemoex/objectDemo1.js",
+		"/home/hemantkumar/lighthouse/w1d3/lecturedemoex/objectDemo2.js",
+		"/home/hemantkumar/lighthouse/w1d3/lecturedemoex/objectDemo3.js",
+		"/home/hemantkumar/lighthouse/w1d3/lecturedemoex/objectDemo4.js",
+		"/home/hemantkumar/lighthouse/w1d3/lecturedemoex/objectDemo5.js",
+		"/home/hemantkumar/lighthouse/w1d2/debuggingerrors/printinframe/print-in-frame.js",
+		"/home/hemantkumar/lighthouse/w1d2/funcReturnFunc.js",
+		"/home/hemantkumar/lighthouse/w1d2/tutorial.txt",
+		"/home/hemantkumar/lighthouse/w1d2/debuggingerrors/daycalculator/day-calculator.js",
+		"/home/hemantkumar/lighthouse/w1d2/rollingdice.js",
+		"/home/hemantkumar/lighthouse/w1d2/debuggingerrors/debugerr/average.js",
+		"/home/hemantkumar/lighthouse/w1d2/debuggingerrors/debugerr/reverse.js",
+		"/home/hemantkumar/lighthouse/w1d2/debuggingerrors/palindrome/palindrome.js",
+		"/home/hemantkumar/lighthouse/w1d2/sum.js",
+		"/home/hemantkumar/lighthouse/w1d1/passwordrefactor/passwordrefactor.js",
+		"/home/hemantkumar/lighthouse/w1d1/reverse/reverse.js",
+		"/home/hemantkumar/lighthouse/w1d1/pig-latin/pig-latin.js",
+		"/home/hemantkumar/lighthouse/w1d1/loopyLighthouse/loopyLighthouse.js",
+		"/home/hemantkumar/lighthouse/w1d1/lunch/lunch.js",
+		"/home/hemantkumar/lighthouse/w1d1/argv/argv.js",
+		"/home/hemantkumar/lighthouse/w1d1/argv/sum.js",
+		"/home/hemantkumar/lighthouse/w1d1/min/min.js",
+		"/home/hemantkumar/lighthouse/w1d1/Concepts/concepts.js",
+		"/home/hemantkumar/lighthouse/w1d1/password/password.js",
+		"/home/hemantkumar/lighthouse/morejs/kata9.js",
+		"/home/hemantkumar/lighthouse/morejs/kata10.js",
+		"/home/hemantkumar/lighthouse/morejs/kata8.js",
+		"/home/hemantkumar/lighthouse/morejs/package.json",
+		"/home/hemantkumar/lighthouse/morejs/kata7.js",
+		"/home/hemantkumar/lighthouse/morejs/kata6.js",
+		"/home/hemantkumar/lighthouse/morejs/kata5.js",
+		"/home/hemantkumar/lighthouse/morejs/kata4.js",
+		"/home/hemantkumar/lighthouse/morejs/kata3.js",
+		"/home/hemantkumar/lighthouse/morejs/kata2.js",
+		"/home/hemantkumar/lighthouse/morejs/kata1.js",
+		"/home/hemantkumar/lighthouse/styles-conference/index.html",
+		"/home/hemantkumar/lighthouse/styles-conference/assets/stylesheets/main.css",
+		"/home/hemantkumar/lighthouse/javascripting/objects.js",
+		"/home/hemantkumar/lighthouse/lighthouse-js-fundamentals/hello.js",
+		"/home/hemantkumar/lighthouse/lighthouse-js-fundamentals/even.js",
+		"/home/hemantkumar/lighthouse/lighthouse-js-fundamentals/odd.js",
+		"/home/hemantkumar/lighthouse/lighthouse-js-fundamentals/ageCalculator.js",
+		"/home/hemantkumar/lighthouse/lighthouse-js-fundamentals/howManyHundreds.js",
+		"/home/hemantkumar/lighthouse/lighthouse-js-fundamentals/iceCreamFlavours.js",
+		"/home/hemantkumar/lighthouse/lighthouse-js-fundamentals/go-outside.js",
+		"/home/hemantkumar/lighthouse/lighthouse-js-fundamentals/whichSchool.js",
+		"/home/hemantkumar/lighthouse/lighthouse-js-fundamentals/areaCalculators.js",
+		"/home/hemantkumar/lighthouse/lighthouse-js-fundamentals/chorus-while.js",
+		"/home/hemantkumar/lighthouse/lighthouse-js-fundamentals/chorus-for.js",
+		"/home/hemantkumar/lighthouse/lighthouse-js-fundamentals/packing-list.js",
+		"/home/hemantkumar/lighthouse/lighthouse-js-fundamentals/ingredients.js",
+		"/home/hemantkumar/lighthouse/lighthouse-js-fundamentals/range.js",
+		"/home/hemantkumar/lighthouse/lighthouse-js-fundamentals/lastIndexOf.js",
+		"/home/hemantkumar/lighthouse/lighthouse-js-fundamentals/loopyLighthouse.js",
+		"/home/hemantkumar/lighthouse/lighthouse-js-fundamentals/loopyLighthouseStretch.js",
+		"/home/hemantkumar/lighthouse/lighthouse-js-fundamentals/concateArrays.js",
+		"/home/hemantkumar/lighthouse/lighthouse-js-fundamentals/mergeArrays.js",
+		"/home/hemantkumar/lighthouse/javascripting/object-properties.js",
+		"/home/hemantkumar/lighthouse/javascripting/functions.js",
+		"/home/hemantkumar/lighthouse/javascripting/function-arguments.js"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 131.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 37.0
+	},
+	"input":
+	{
+		"height": 50.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "expressassignment.sublime-project",
+	"replace":
+	{
+		"height": 70.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 206.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

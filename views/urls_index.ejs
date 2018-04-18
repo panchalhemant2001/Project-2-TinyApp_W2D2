@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TinyApp</title>
+</head>
+<body>
+  <!-- Add your EJS code here -->
+  <% include ./partials/_header %>
+
+
+  <table align="center" border="1" width="600" cellspacing="0" cellpadding="5px">
+
+    <tr>
+      <td colspan="2">  <h2> Your Short URLs</h2></td>
+    </tr>
+
+    <%
+    var hostUrl = templateVars.hostUrl + "/u/";  //this line must be first before the next line because of templateVars is resused in that case
+    var templateVars = templateVars.urls;
+    %>
+
+    <tr><th>Short URLs</th><th>URLs</th></tr>
+    <% for(var key in templateVars) { %>
+
+      <tr>
+        <td><a href="<%= templateVars[key] %>"><%= hostUrl + key %></a></td>
+
+        <td><%= templateVars[key] %></td>
+
+
+        <td>
+          <a href="/urls/<%= key %>">Edit</a>
+        </td>
+
+        <td>
+          <% var deleteUrl = 'urls/'+ key + '/delete'; %>
+          <form method="post" action="<%= deleteUrl %>">
+            <button type="submit">Delete</button>
+          </form>
+        </td>
+      </tr>
+
+    <% } %>
+
+    <tr>
+      <td colspan="2">
+      <a href="/urls/new">Add New URL to Database</a>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
