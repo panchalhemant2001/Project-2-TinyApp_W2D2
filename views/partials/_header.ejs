@@ -1,1 +1,25 @@
-<h1>TinyApp</h1>
+<h3>TinyApp</h3>
+<a href="/">Home Page</a>
+
+
+<%
+  if(!templateVars.user) {
+%>
+  <table align="right">
+    <tr>
+      <td>
+        <a href="/login">Login Here</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        New User? <a href="/register">Register</a>
+      </td>
+    </tr>
+  </table>
+<% } else if (templateVars.user) { %>
+  Welcome <%= templateVars.user.email %>
+  <form method="POST" action="/signout">
+    <button>Signout</button>
+  </form>
+<% } %>
