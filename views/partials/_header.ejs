@@ -18,8 +18,19 @@
     </tr>
   </table>
 <% } else if (templateVars.user) { %>
-  Welcome <%= templateVars.user.email %>
-  <form method="POST" action="/signout">
-    <button>Signout</button>
-  </form>
+
+  <table align="right">
+    <tr>
+      <td>
+        Welcome <%= templateVars.user.email %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <form method="POST" action="/signout">
+          <button>Signout</button>
+        </form>
+      </td>
+    </tr>
+  </table>
 <% } %>

@@ -7,10 +7,15 @@ app.set("view engine", "ejs");
 
 
 const bodyParser = require("body-parser");
-const cookieParser = require("cookie-parser");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-app.use(cookieParser());
+// const cookieParser = require("cookie-parser");
+// app.use(cookieParser());
+const cookieSession = require("cookie-session");
+app.use(cookieSession({
+  name: "session",
+  keys: ["hello"]
+}));
 
 const bcrypt = require("bcrypt");
 
@@ -25,44 +30,21 @@ const urlDatabase = {
     "9sm5xK": {
       "9sm5xK": "http://www.google.com",
       "userID": "user2RandomID"
-    },
-
-    "9sm5xQ": {
-      "9sm5xQ": "http://www.maps.google.com",
-      "userID": "phm"
     }
   };
-
-
 
 
 const users = {
   "userRandomID": {
       id: "userRandomID",
       email: "user@example.com",
-      //password: "purple-monkey-dinosaur"
       password: "$2b$10$6efRUaGeV64j3I8dCpirr.I4wc1fuNm6FyeemWclZo3SACJR5dSdK"
     },
 
    "user2RandomID": {
       id: "user2RandomID",
       email: "user2@example.com",
-      //password: "dishwasher-funk"
       password: "$2b$10$l27cJydcZuwp.efFHZKZIeBXX4dWBpr7PMrpYdBTGiLxODWjkqOwm"
-    },
-
-    "phm": {
-      id: "phm",
-      email: "panchalhemant2001@gmail.com",
-      //password: "mp"
-      password: "$2b$10$KG8Wg5t5fDcZLq3vAd4eO..VLkkMuwgcXHE2BDzcB0FhleIZyy57m"
-    },
-
-    "shp": {
-      id: "shp",
-      email: "panchalsonal2007@yahoo.com",
-      //password: "mp"
-      password: "$2b$10$KG8Wg5t5fDcZLq3vAd4eO..VLkkMuwgcXHE2BDzcB0FhleIZyy57m"
     }
 };
 
@@ -91,11 +73,8 @@ function getFullURLObject(shortURL) {
       urlObj["longURL"] = urlDatabase[key][key];
     }
   }
-
   return urlObj;
 }
-
-
 
 
 //function returning true if user with same email exists
@@ -109,8 +88,6 @@ function isUserAlreadyExists(email) {
   }
   return result;
 }
-
-
 
 //function returning user object for user id passed to it
 function getUserObject(userid) {
@@ -141,6 +118,7 @@ function getUserObjectByEmail(email) {
   return userObj;
 }
 
+
 //function returning subset of urlDatabase for specific user id
 function urlsForUser(id) {
   let tempUrlDatabase = {};
@@ -154,13 +132,9 @@ function urlsForUser(id) {
 
 
 
-
-
 app.get("/", (req, res) => {
   res.redirect('/urls');
 });
-
-
 
 
 app.get("/urls.json", (req, res) => {
@@ -171,24 +145,22 @@ app.get("/hello", (req, res) => {
   res.end("<html><body>Hello <b>World</b></body></html>\n");
 });
 
+
 app.get("/urls", (req, res) => {
 
   let hostUrl = req.protocol +"://" +  req.hostname + ":" + PORT;
 
   //getting subset of the urlDatabase for current user logged in
-  let tempUrlDatabase = urlsForUser(req.cookies.user_id);
+  let tempUrlDatabase = urlsForUser(req.session.user_id);
 
 
   //getting user object for user_id (user_id from request cookie)
-  let userObj = getUserObject(req.cookies.user_id);  //getting user id from user_id cookies
+  let userObj = getUserObject(req.session.user_id);  //getting user id from user_id cookies
 
   let templateVars = { urls: tempUrlDatabase,
                       hostUrl: hostUrl,
                       user: userObj
                     };
-
-
-
   res.render("urls_index", {templateVars: templateVars});
 });
 
@@ -201,35 +173,31 @@ app.post("/urls", (req, res) => {
 
   let tempUrlObj = {};
   tempUrlObj[newShortURL] = newLongURL;
-  tempUrlObj["userID"] = req.cookies.user_id;
+  tempUrlObj["userID"] = req.session.user_id;
 
   urlDatabase[newShortURL] = tempUrlObj;
   res.redirect('/urls');
 });
 
 
-
-
 app.get("/urls/new", (req, res) => {
 
-//getting user object for user_id (user_id from request cookie)
-  if(req.cookies.user_id) {
+  //getting user object for user_id (user_id from request cookie)
+  if(req.session.user_id) {
 
-    let userObj = getUserObject(req.cookies.user_id);  //getting user id from user_id cookies
+    let userObj = getUserObject(req.session.user_id);  //getting user id from user_id cookies
 
     let templateVars = {user: userObj};
     res.render("urls_new", {templateVars: templateVars});
   } else {
     res.redirect("/login");
   }
-
-
 });
 
 
 //delete urls
 app.post("/urls/:id/delete", (req, res) => {
-  if(req.cookies.user_id) {
+  if(req.session.user_id) {
     delete urlDatabase[req.params.id];
     res.redirect('/urls');   //redirecting to index page
   } else {
@@ -242,14 +210,14 @@ app.post("/urls/:id/delete", (req, res) => {
 
 app.get("/urls/:id", (req, res) => {
 
-  if(req.cookies.user_id) {
+  if(req.session.user_id) {
 
     //checking if short url belongs to the current user or not
     //if it belongs to the current user, then only will show
 
     let flag = 0;   //assuming :id (shorturl) doesn't belong to current user
 
-    let tempUrlDatabase = urlsForUser(req.cookies.user_id);
+    let tempUrlDatabase = urlsForUser(req.session.user_id);
 
     for(let key in tempUrlDatabase) {
       if(key == req.params.id) {
@@ -265,7 +233,7 @@ app.get("/urls/:id", (req, res) => {
       let urlObj = getFullURLObject(templateVarsNew.shortURL);
 
       //getting user object for user_id (user_id from request cookie)
-      let userObj = getUserObject(req.cookies.user_id);  //getting user id from user_id cookies
+      let userObj = getUserObject(req.session.user_id);  //getting user id from user_id cookies
       let templateVars = {user: userObj};
 
       res.render("urls_show", {urlObj: urlObj, hostUrl: hostUrl, templateVars: templateVars});
@@ -274,10 +242,6 @@ app.get("/urls/:id", (req, res) => {
       page += "<a href='/urls'>Goto Homepage</a>";
       res.send(page);
     }
-
-
-
-
   } else {
     res.redirect("/login");
   }
@@ -285,7 +249,7 @@ app.get("/urls/:id", (req, res) => {
 
 
 app.post("/urls/:id", (req, res) => {
-  if(req.cookies.user_id) {
+  if(req.session.user_id) {
     urlDatabase[req.params.id][req.params.id] = req.body.longNewUrl;
     res.redirect('/urls');
   } else {
@@ -337,13 +301,12 @@ app.post("/login", (req, res) => {
 
   if(userObj) {
 
-
     if(bcrypt.compareSync(password, userObj.password)) {
       //Login successfull Here
       let user_id = userObj.id;
 
-      res.cookie("user_id", user_id);
-      res.cookie("user_id", user_id);
+      req.session.user_id = user_id;
+
       res.redirect("/");
     } else {
       res.statusCode = 403;
@@ -364,12 +327,16 @@ app.post("/login", (req, res) => {
 });
 
 app.post("/signout", (req, res) => {
-  res.clearCookie("user_id");
+  req.session = null;
   res.redirect("/urls");
 });
 
 app.get("/register", (req, res) => {
-  res.render('urls_register');
+  if(req.session.user_id) {
+    res.redirect("/urls");
+  } else {
+    res.render('urls_register');
+  }
 });
 
 
@@ -397,14 +364,14 @@ app.post("/register", (req, res) => {
     res.send(page);
   } else {
     //registering user by adding it to users global object
-    //and setting user id to user_id cookie
+    //and setting user id to user_id session
     users[id] = { id: id, email: email, password: password };
-    res.cookie("user_id", id);
-    //console.log(users);
+
+    req.session.user_id = id;
     res.redirect("/urls");
   }
 });
 
 var server = app.listen(PORT, () => {
-  console.log(`Example app listening on port ${PORT}`);
+  console.log(`TinyApp listening on port ${PORT}`);
 });
