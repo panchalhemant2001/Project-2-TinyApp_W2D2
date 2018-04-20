@@ -238,8 +238,8 @@ app.get("/urls/:id", (req, res) => {
 
       res.render("urls_show", {urlObj: urlObj, hostUrl: hostUrl, templateVars: templateVars});
     } else {
-      let page = "<h1>ShortKey doesn't exist for current user!</h1>";
-      page += "<a href='/urls'>Goto Homepage</a>";
+      let page = "<h3 align='center'>ShortKey doesn't exist for current user!</h3>";
+      page += "<p align='center'><a href='/urls'>Goto Homepage</a></p>";
       res.send(page);
     }
   } else {
@@ -280,8 +280,8 @@ app.get("/u/:shortURL", (req, res) => {
   } else if(longURL == undefined){
     res.statusCode = 301;
 
-    var page = "<h1>Error - " + res.statusCode + ": Page Not Fond</h1>";
-    page += "<a href='/urls'>Goto Homepage</a>";
+    var page = "<h3 align='center'>Error - " + res.statusCode + ": Page Not Fond</h3>";
+    page += "<p align='center'><a href='/urls'>Goto Homepage</a></p>";
     res.send(page);
   }
 });
@@ -311,16 +311,16 @@ app.post("/login", (req, res) => {
     } else {
       res.statusCode = 403;
       res.statusCode = 403;
-      let page = "Error " + res.statusCode + ": ";
-      page += "Incorrect Username/Password!";
-      page += "<a href='/login'>Goto Login Page...</a>";
+      let page = "<h3 align='center'>Error " + res.statusCode + ": ";
+      page += "Incorrect Username/Password!</h3>";
+      page += "<p align='center'><a href='/login'>Goto Login Page...</a></p>";
       res.send(page);
     }
   } else {
     res.statusCode = 403;
-    let page = "Error " + res.statusCode + ": ";
-    page += "Incorrect Username/Password!";
-    page += "<a href='/login'>Goto Login Page...</a>";
+    let page = "<h3 align='center'>Error " + res.statusCode + ": ";
+    page += "Incorrect Username/Password!<h3>";
+    page += "<p align='center'><a href='/login'>Goto Login Page...</a></p>";
     res.send(page);
   }
 
@@ -343,7 +343,7 @@ app.get("/register", (req, res) => {
 app.post("/register", (req, res) => {
   let email = req.body.email;
   let password = req.body.password;
-  password = bcrypt.hashSync(password, 10);
+
 
 
   let id = generateRandomString();
@@ -352,19 +352,22 @@ app.post("/register", (req, res) => {
   if(!email || !password || email == "" || password == "") {
     let page = "";
     res.statusCode = 400;
-    page += "Error " + res.statusCode + ": Email or Password fields are empty!";
-    page += "<br><a href='/register'>Goto Register Form</a>";
+    page += "<h3 align='center'>Error " + res.statusCode + ": Email or Password fields are empty!</h3>";
+    page += "<p align='center'><a href='/register'>Goto Register Form</a></p>";
     res.send(page);
   } else if(isUserAlreadyExists(email)) {
     //checking if the user email already exists
     let page = "";
     res.statusCode = 400;
-    page += "Error " + res.statusCode + ": User with email " + email + " already exists!";
-    page += "<br><a href='/register'>Goto Register Form</a>";
+    page += "<h3 align='center'>Error " + res.statusCode + ": User with email " + email + " already exists!</h3>";
+    page += "<p align='center'><a href='/register'>Goto Register Form</a></p>";
     res.send(page);
   } else {
+    //Encrypting password
+    password = bcrypt.hashSync(password, 10);
     //registering user by adding it to users global object
     //and setting user id to user_id session
+
     users[id] = { id: id, email: email, password: password };
 
     req.session.user_id = id;
