@@ -220,28 +220,10 @@
 	"buffers":
 	[
 		{
-			"file": "views/partials/_header.ejs",
+			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 598,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/urls_index.ejs",
-			"settings":
-			{
-				"buffer_size": 1750,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "express_server.js",
-			"settings":
-			{
-				"buffer_size": 9402,
+				"buffer_size": 2484,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -314,11 +296,11 @@
 	"file_history":
 	[
 		"/home/hemantkumar/lighthouse/projects/TinyApp/express_server.js",
-		"/home/hemantkumar/lighthouse/projects/TinyApp/views/urls_show.ejs",
-		"/home/hemantkumar/lighthouse/projects/TinyApp/README.md",
-		"/home/hemantkumar/lighthouse/projects/TinyApp/views/urls_index.ejs",
-		"/home/hemantkumar/lighthouse/projects/TinyApp/views/urls_register.ejs",
 		"/home/hemantkumar/lighthouse/projects/TinyApp/views/partials/_header.ejs",
+		"/home/hemantkumar/lighthouse/projects/TinyApp/views/urls_register.ejs",
+		"/home/hemantkumar/lighthouse/projects/TinyApp/views/urls_index.ejs",
+		"/home/hemantkumar/lighthouse/projects/TinyApp/README.md",
+		"/home/hemantkumar/lighthouse/projects/TinyApp/views/urls_show.ejs",
 		"/home/hemantkumar/lighthouse/projects/TinyApp/views/urls_login.ejs",
 		"/home/hemantkumar/lighthouse/projects/TinyApp/views/urls_new.ejs",
 		"/home/hemantkumar/lighthouse/projects/TinyApp/views/urls_register",
@@ -434,7 +416,7 @@
 	],
 	"find":
 	{
-		"height": 36.0
+		"height": 49.0
 	},
 	"find_in_files":
 	{
@@ -448,6 +430,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Error",
+			"/login",
+			"![\"screenshot description\"](#)\n",
 			"req.session",
 			"res.cookie",
 			"req.cookie",
@@ -480,94 +465,34 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "views/partials/_header.ejs",
+					"file": "README.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 598,
+						"buffer_size": 2484,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								448,
-								448
+								2484,
+								2484
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "views/urls_index.ejs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1750,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								568,
-								568
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "express_server.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9402,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7427,
-								7427
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 7588.0,
+						"translation.y": 1960.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
